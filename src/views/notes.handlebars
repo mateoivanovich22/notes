@@ -1,0 +1,49 @@
+<div class="notes-container">
+    <div class="createNote">
+        <h1 style="color: black;">Notes</h1>  
+        <button class="BtnCreate">
+    
+            <div class="sign">+</div>
+            
+            <div class="text" onclick="createNote()">Create Note</div>
+        </button>
+    </div>
+    
+    <div class="containerNotes">
+        {{#if notes.notes}}
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        {{#each notes.notes}}
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img width="400px" height="400px" src="../img/{{image}}" class="card-img" alt="{{title}} image">
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">{{title}}</h2>
+                                    <p class="description">{{wordsCount}} words..</p>
+                                    <button class="button" onclick="viewNote('{{_id}}')">View More</button>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        {{else}}
+            <p>No hay notas disponibles.</p>
+        {{/if}}
+
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script src="/js/notes.js" ></script>
