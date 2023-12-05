@@ -21,7 +21,7 @@ Check out the live demo [here](link_to_demo) to experience "Notes" inspired by "
 ## Getting Started
 1. Clone the repository.
 2. Install dependencies using `npm install`.
-3. Run the application using `npm start`.
+3. Run the application using `node ./src/index.js`.
 4. Access `localhost:PORT` on your browser to explore.
 
 ## Author
