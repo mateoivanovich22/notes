@@ -30,9 +30,8 @@ var swiper = new Swiper(".slide-content", {
 })
 
 if (!sessionStorage.getItem('paginaRecargada')) {
-    // Recargar la página si no ha sido recargada antes
     sessionStorage.setItem('paginaRecargada', 'true');
-    location.reload(); // o window.location.reload() dependiendo de tu preferencia
+    location.reload();
 }
 
 function createNote() {

@@ -48,7 +48,7 @@ form.addEventListener('submit', async function (event) {
         .then(response => {
           if (!response.ok) {
             throw new Error('Error en la solicitud fetch');
-          }
+          }   
           sessionStorage.removeItem('paginaRecargada');
           return response.json();
         })
@@ -58,7 +58,11 @@ form.addEventListener('submit', async function (event) {
         .catch(error => {
           console.error('Error en la solicitud fetch', error);
         });
-      window.location.href = '/notes';
+
+      setTimeout(() => {
+        window.location.href = '/notes';
+      },4000);
+      
     }
 
   },2000)
